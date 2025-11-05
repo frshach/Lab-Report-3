@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form with Inline Calculator</title>
+    
+</head>
+<body>
+
+     <!-- Header Section -->
+    <div>
+        <table border="1" width="100%" bgcolor="#b3d9ff">
+            <tr>
+                <td align="center">
+                    <h1>Student Information <span>- Universiti Malaysia Terengganu</span></h1>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Content Section -->
+    <div>
+        <table border="1" width="100%" bgcolor="#e6f2ff">
+            <tr>
+                <td>
+                    <h2>Student Form</h2>
+                        <form>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name">
+                            <br>
+                            <label for="studentid">Student ID:</label>
+                            <input type="text" id="studentid" name="studentid">
+                            <br>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email">
+                            <br>
+                            <label>Gender:</label>
+                            <input type="radio" name="gender" value="Male"> Male
+                            <input type="radio" name="gender" value="Female"> Female
+                            <br>
+                            <label for="major">Choose A Major:</label><br>
+                            <select id="major" name="major">
+                                <option value="SC">Science Computer</option>
+                                <option value="ACC">Account</option>
+                                <option value="FIN">Finance</option>
+                                <option value="MED">Medic</option>
+                            </select><br>
+                            <input type="submit" value="Submit">
+                        </form>
+                </td>
+            </tr>
+        </table>
+        
+        
+        <table border="1" width="100%" bgcolor="#ccf2ff">
+            <tr>
+                <td>
+                    <h2>Contact Form</h2>
+                    <form>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <br>
+                        <label for="date">Preferred Contact Date:</label>
+                        <input type="date" id="date" name="date">
+                        <br>
+                        <label for="satisfaction">Satisfaction Level:</label>
+                        <input type="range" id="satisfaction" name="satisfaction" min="0" max="10">
+
+                        <br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </td>
+            </tr>
+        </table>
+       
+        
+    
+        <!-- Inline Calculator -->
+        <div class="calculator">
+            <table border="1" width="100%" bgcolor="#d9f2d9">
+                <tr>
+                    <td>
+                        <h2>Inline Calculator</h2>
+                        <p>Enter two numbers to calculate the sum:</p>
+
+                        <input type="number" id="num1" oninput="calculateSum()" placeholder="Number 1">
+                        <input type="number" id="num2" oninput="calculateSum()" placeholder="Number 2">
+                        <br>
+                        <output id="result">0</output>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div>
+        <table border="1" width="100%" bgcolor="#b3d9ff">
+            <tr>
+                <td align="center">
+                    <footer>
+                        <p>Contact us at: info@example.com</p>
+                        <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+                    </footer>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function calculateSum() {
+            let n1 = parseFloat(document.getElementById('num1').value) || 0;
+            let n2 = parseFloat(document.getElementById('num2').value) || 0;
+            document.getElementById('result').value = n1 + n2;
+        }
+    </script>
+
+</body>
+</html>
